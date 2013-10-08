@@ -5,12 +5,23 @@
 <artifactId>mlia-api</artifactId>
 <packaging>jar</packaging>
 <version>1.0-SNAPSHOT</version>
-<name>mlia</name>
+<name>mlia-api</name>
 <url>https://github.com/agaricusb/MLIA</url>
 <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 </properties>
+<parent>
+    <groupId>mods.agaricus</groupId>
+    <artifactId>mlia</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</parent>
 <dependencies>
+    <dependency>
+        <groupId>mods.agaricus</groupId>
+        <artifactId>mlia-impl</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+
     <dependency>
         <groupId>net.sf.trove4j</groupId>
         <artifactId>trove4j</artifactId>
@@ -59,6 +70,60 @@
                 </compilerArgs>
             </configuration>
         </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>2.1</version>
+            <configuration>
+                <classesDirectory>${basedir}/target/classes</classesDirectory>
+                <archive>
+                    <manifestEntries>
+                        <Main-Class>agaricus.mods.mlia.Main</Main-Class>
+                        <Implementation-Title>MLIA</Implementation-Title>
+                        <Implementation-Version>${describe}</Implementation-Version>
+                        <Implementation-Vendor>MLIA</Implementation-Vendor>
+                    </manifestEntries>
+                </archive>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>2.0</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
     </plugins>
 </build>
+<profiles>
+    <profile>
+        <id>static_build_number</id>
+        <activation>
+            <property>
+                <name>!env.BUILD_NUMBER</name>
+            </property>
+        </activation>
+        <properties>
+            <buildNumber>0</buildNumber>
+        </properties>
+    </profile>
+    <profile>
+        <id>dynamic_build_number</id>
+        <activation>
+            <property>
+                <name>env.BUILD_NUMBER</name>
+            </property>
+        </activation>
+        <properties>
+            <buildNumber>${env.BUILD_NUMBER}</buildNumber>
+        </properties>
+    </profile>
+</profiles>
+
 </project>

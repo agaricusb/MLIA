@@ -10,6 +10,11 @@
 <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 </properties>
+<parent>
+    <groupId>mods.agaricus</groupId>
+    <artifactId>mlia</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</parent>
 <dependencies>
 </dependencies>
 <build>
