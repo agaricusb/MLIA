@@ -63,10 +63,11 @@
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.0</version>
+            <version>3.1</version>
             <configuration>
                 <compilerArgs>
-                    <arg>-Xmaxerrs=10000</arg>
+                    <arg>-Xmaxerrs</arg>
+                    <arg>10000</arg>
                 </compilerArgs>
             </configuration>
         </plugin>
