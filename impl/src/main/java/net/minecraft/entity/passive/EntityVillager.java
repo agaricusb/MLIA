@@ -1,4 +1,6 @@
 package net.minecraft.entity.passive;
 
-public class EntityVillager {
+import net.minecraft.entity.Entity;
+
+public class EntityVillager extends Entity {
 }

@@ -1,4 +1,4 @@
 package net.minecraft.entity;
 
-public class EntityLiving {
+public class EntityLiving extends Entity {
 }

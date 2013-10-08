@@ -1,4 +1,6 @@
 package net.minecraft.entity.item;
 
-public class EntityItem {
+import net.minecraft.entity.Entity;
+
+public class EntityItem extends Entity {
 }
