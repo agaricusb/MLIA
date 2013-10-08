@@ -3,15 +3,161 @@
 <modelVersion>4.0.0</modelVersion>
 <groupId>mods.agaricus</groupId>
 <artifactId>mlia</artifactId>
-<packaging>pom</packaging>
+<packaging>jar</packaging>
 <version>1.0-SNAPSHOT</version>
 <name>mlia</name>
 <url>https://github.com/agaricusb/MLIA</url>
 <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 </properties>
-<modules>
-    <module>impl</module>
-    <module>api</module>
-</modules>
+<!-- for paulscode -->
+<repositories>
+    <repository>
+        <id>cma-repo</id>
+        <url>http://cmastudios.me/repo/maven/</url>
+    </repository>
+</repositories>
+<dependencies>
+    <!-- Common dependencies -->
+    <dependency>
+        <groupId>net.sf.trove4j</groupId>
+        <artifactId>trove4j</artifactId>
+        <version>3.0.2</version>
+    </dependency>
+    <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>14.0-rc3</version>
+        <type>jar</type>
+    </dependency>
+    <dependency>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm-all</artifactId>
+        <version>4.1</version>
+    </dependency>
+    <dependency>
+        <groupId>net.sourceforge.argo</groupId>
+        <artifactId>argo</artifactId>
+        <version>3.2</version>
+        <type>jar</type>
+        <scope>compile</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.bouncycastle</groupId>
+        <artifactId>bcprov-jdk15on</artifactId>
+        <version>1.48</version>
+        <type>jar</type>
+    </dependency>
+    <dependency>
+        <groupId>org.scala-lang</groupId>
+        <artifactId>scala-library</artifactId>
+        <version>2.10.2</version>
+    </dependency>
+    <!-- Client dependencies -->
+    <dependency>
+        <groupId>org.lwjgl.lwjgl</groupId>
+        <artifactId>lwjgl</artifactId>
+        <version>2.8.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.lwjgl.lwjgl</groupId>
+        <artifactId>lwjgl_util</artifactId>
+        <version>2.8.4</version>
+    </dependency>
+    <dependency>
+        <groupId>paulscode</groupId>
+        <artifactId>sound</artifactId>
+        <version>1.1</version>
+    </dependency>
+</dependencies>
+<build>
+    <sourceDirectory>impl/src/main/java</sourceDirectory>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+            <version>1.1</version>
+            <executions>
+                <execution>
+                    <id>add-source</id>
+                    <phase>generate-sources</phase>
+                    <goals>
+                        <goal>add-source</goal>
+                    </goals>
+                    <configuration>
+                        <sources>
+                            <source>fml/common</source>
+                            <source>fml/client</source>
+                            <!-- <source>fml/server</source> -->
+                        </sources>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+            <configuration>
+                <compilerArgs>
+                    <arg>-Xmaxerrs</arg>
+                    <arg>10000</arg>
+                </compilerArgs>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>2.1</version>
+            <configuration>
+                <classesDirectory>${basedir}/target/classes</classesDirectory>
+                <archive>
+                    <manifestEntries>
+                        <Main-Class>agaricus.mods.mlia.Main</Main-Class>
+                        <Implementation-Title>MLIA</Implementation-Title>
+                        <Implementation-Version>${describe}</Implementation-Version>
+                        <Implementation-Vendor>MLIA</Implementation-Vendor>
+                    </manifestEntries>
+                </archive>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>2.0</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+<profiles>
+    <profile>
+        <id>static_build_number</id>
+        <activation>
+            <property>
+                <name>!env.BUILD_NUMBER</name>
+            </property>
+        </activation>
+        <properties>
+            <buildNumber>0</buildNumber>
+        </properties>
+    </profile>
+    <profile>
+        <id>dynamic_build_number</id>
+        <activation>
+            <property>
+                <name>env.BUILD_NUMBER</name>
+            </property>
+        </activation>
+        <properties>
+            <buildNumber>${env.BUILD_NUMBER}</buildNumber>
+        </properties>
+    </profile>
+</profiles>
 </project>
