@@ -1,4 +1,6 @@
 package net.minecraft.client.multiplayer;
 
-public class NetClientHandler {
+import net.minecraft.network.packet.NetHandler;
+
+public class NetClientHandler extends NetHandler {
 }

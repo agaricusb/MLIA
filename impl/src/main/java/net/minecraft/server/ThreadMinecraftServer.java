@@ -1,4 +1,4 @@
 package net.minecraft.server;
 
-public class ThreadMinecraftServer {
+public class ThreadMinecraftServer extends Thread {
 }

@@ -1,4 +1,6 @@
 package net.minecraft.network;
 
-public class NetServerHandler {
+import net.minecraft.network.packet.NetHandler;
+
+public class NetServerHandler extends NetHandler {
 }

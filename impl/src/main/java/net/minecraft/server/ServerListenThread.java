@@ -1,4 +1,4 @@
 package net.minecraft.server;
 
-public class ServerListenThread {
+public class ServerListenThread extends Thread {
 }

@@ -1,4 +1,4 @@
 package net.minecraft.world.chunk;
 
-public class IChunkProvider {
+public interface IChunkProvider {
 }

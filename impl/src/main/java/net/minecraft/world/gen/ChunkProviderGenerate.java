@@ -1,4 +1,6 @@
 package net.minecraft.world.gen;
 
-public class ChunkProviderGenerate {
+import net.minecraft.world.chunk.IChunkProvider;
+
+public class ChunkProviderGenerate implements IChunkProvider {
 }

@@ -1,4 +1,6 @@
 package net.minecraft.world.gen;
 
-public class ChunkProviderHell {
+import net.minecraft.world.chunk.IChunkProvider;
+
+public class ChunkProviderHell implements IChunkProvider {
 }
