@@ -9,6 +9,7 @@
 <url>https://github.com/agaricusb/MLIA</url>
 <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compile.compilerargs>-Xmaxerrs 10000</maven.compile.compilerargs>
 </properties>
 <dependencies>
     <dependency>
