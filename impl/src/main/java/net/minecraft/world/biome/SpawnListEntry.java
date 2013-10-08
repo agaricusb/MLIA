@@ -12,7 +12,7 @@ public class SpawnListEntry {
     }
 
     public Class<? extends EntityLiving> field_76300_b;
-    int field_76292_a;
-    int field_76301_c;
-    int field_76299_d;
+    public int field_76292_a;
+    public int field_76301_c;
+    public int field_76299_d;
 }
