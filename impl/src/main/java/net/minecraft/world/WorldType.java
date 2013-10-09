@@ -7,6 +7,8 @@ public class WorldType {
     /** default world type */
     public static WorldType field_77137_b = new WorldType();
 
+    public static BiomeGenBase base12Biomes = new BiomeGenBase();
+
     /** list of available world types */
     public static WorldType[] field_77139_a = { field_77137_b };
 
