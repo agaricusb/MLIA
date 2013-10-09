@@ -39,7 +39,7 @@ public class Minecraft {
 
     /** are in we in demo mode? */
     public boolean func_71355_q() {
-        return false;
+        return true;
     }
 
     public void func_71377_b(CrashReport crashReport) {
