@@ -6,6 +6,7 @@ import net.minecraft.client.renderer.RenderEngine;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
 
 import java.io.InputStream;
@@ -43,5 +44,19 @@ public class Minecraft {
 
     public void func_71377_b(CrashReport crashReport) {
         System.out.println("Crashed :(" + crashReport);
+    }
+
+    /** get server */
+    public MinecraftServer func_71401_C() {
+        return null;
+    }
+
+    public void continueWorldLoading() {
+
+    }
+
+    /** reset client state */
+    public void func_71403_a(WorldClient worldClient) {
+
     }
 }

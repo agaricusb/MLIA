@@ -2,6 +2,7 @@ package net.minecraft.entity;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 public class Entity {
 
@@ -48,5 +49,13 @@ public class Entity {
     /** get parts for multi-part entities */
     public Entity[] func_70021_al() {
         return null;
+    }
+
+    public void func_75687_a(List metadata) {
+
+    }
+
+    public void func_70016_h(double scaledSpeedX, double scaledSpeedY, double scaledSpeedZ) {
+
     }
 }

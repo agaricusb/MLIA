@@ -1,4 +1,4 @@
 package net.minecraft.item;
 
-public class ItemBlock {
+public class ItemBlock extends Item {
 }

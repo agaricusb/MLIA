@@ -14,4 +14,9 @@ public class INetworkManager {
     public String func_74430_c() {
         return null;
     }
+
+    /** pulse the network manager */
+    public void func_74428_b() {
+
+    }
 }

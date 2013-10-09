@@ -1,4 +1,10 @@
 package net.minecraft.client.multiplayer;
 
-public class GuiConnecting {
+import net.minecraft.client.gui.GuiScreen;
+
+public class GuiConnecting extends GuiScreen {
+
+    public static void forceTermination(GuiConnecting guiConnecting) {
+
+    }
 }
