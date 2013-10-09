@@ -1,5 +1,6 @@
 package net.minecraft.client;
 
+import cpw.mods.fml.relauncher.ArgsWrapper;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.RenderEngine;
@@ -67,5 +68,9 @@ public class Minecraft {
     /** get root directory (called in FMLRelauncher) */
     public static String func_71380_b() { // aka getMinecraftDir() or b()
         return ".";
+    }
+
+    public static void fmlReentry(ArgsWrapper wrapper) {
+        System.out.println("entered fmlReentry");
     }
 }
