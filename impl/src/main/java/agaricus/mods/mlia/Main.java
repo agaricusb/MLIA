@@ -1,6 +1,8 @@
 package agaricus.mods.mlia;
 
 import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.relauncher.ArgsWrapper;
+import cpw.mods.fml.relauncher.FMLRelauncher;
 import net.minecraft.client.Minecraft;
 
 public class Main {
@@ -9,12 +11,6 @@ public class Main {
 
         Minecraft client = new Minecraft();
 
-        System.out.println("MLIA loading...");
-        FMLClientHandler.instance().beginMinecraftLoading(client);
-        System.out.println("Finishing loading");
-        FMLClientHandler.instance().finishMinecraftLoading();
-        System.out.println("Initialization completing");
-        FMLClientHandler.instance().onInitializationComplete();
-        System.out.println("Done");
+        FMLRelauncher.handleClientRelaunch(new ArgsWrapper(args));
     }
 }
