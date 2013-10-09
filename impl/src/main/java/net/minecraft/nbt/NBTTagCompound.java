@@ -1,6 +1,6 @@
 package net.minecraft.nbt;
 
-public class NBTTagCompound {
+public class NBTTagCompound extends NBTBase {
 
     public void func_74782_a(String key, NBTTagList list) {
 
@@ -21,6 +21,11 @@ public class NBTTagCompound {
         return 0;
     }
 
+    /** get compound tag */
+    public NBTTagCompound func_74775_l(String key) {
+        return null;
+    }
+
     /** get whether a key exists */
     public boolean func_74764_b(String key) {
         return true;
@@ -31,7 +36,13 @@ public class NBTTagCompound {
 
     }
 
+    /** set int */
     public void func_74768_a(String key, int value) {
+
+    }
+
+    /** set compound tag */
+    public void func_74766_a(String key, NBTTagCompound tagCompound) {
 
     }
 }

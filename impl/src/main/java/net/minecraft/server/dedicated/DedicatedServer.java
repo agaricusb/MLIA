@@ -1,4 +1,6 @@
 package net.minecraft.server.dedicated;
 
-public class DedicatedServer {
+import net.minecraft.server.MinecraftServer;
+
+public class DedicatedServer extends MinecraftServer {
 }

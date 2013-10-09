@@ -4,6 +4,7 @@ import cpw.mods.fml.common.network.FMLPacket;
 
 public class Packet250CustomPayload extends Packet {
 
+
     /** target */
     public String field_73630_a;
 
@@ -12,6 +13,10 @@ public class Packet250CustomPayload extends Packet {
 
     /** length */
     public int field_73628_b;
+
+    public Packet250CustomPayload() {
+
+    }
 
     public Packet250CustomPayload(String type, byte[] data) {
 

@@ -7,6 +7,6 @@ import java.util.List;
 public class DataWatcher {
 
     public static List<Object> func_75686_a(DataInputStream dataInputStream) throws IOException {
-
+        throw new IOException();
     }
 }
