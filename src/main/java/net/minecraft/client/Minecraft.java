@@ -45,7 +45,7 @@ import java.io.InputStream;
 public class Minecraft {
 
 
-    public RenderEngine field_71446_o;
+    public RenderEngine field_71446_o = new RenderEngine();
 
     /* texture packs - not implemented */
     public Minecraft field_71418_C;
