@@ -1,5 +1,7 @@
 package net.minecraft.nbt;
 
+import java.io.IOException;
+
 public class CompressedStreamTools {
 
     /** serialize */
@@ -8,7 +10,7 @@ public class CompressedStreamTools {
     }
 
     /* deserialize */
-    public static NBTTagCompound func_74792_a(byte[] bytes) {
-        return null;
+    public static NBTTagCompound func_74792_a(byte[] bytes) throws IOException {
+        throw new IOException();
     }
 }

@@ -13,6 +13,11 @@ public class Entity {
     public double field_70163_u;
     public double field_70161_v;
 
+    /** entity raw x,y,z */
+    public int field_70118_ct;
+    public int field_70117_cu;
+    public int field_70116_cv;
+
     /** entity yaw */
     public float field_70177_z;
 
@@ -34,5 +39,14 @@ public class Entity {
     /** TODO: unknown class */
     public void func_75689_a(DataOutputStream dataOutputStream) throws IOException {
         throw new IOException();
+    }
+
+    public void func_70012_b(double scaledX, double scaledY, double scaledZ, double scaledYaw, double scaledPitch) {
+
+    }
+
+    /** get parts for multi-part entities */
+    public Entity[] func_70021_al() {
+        return null;
     }
 }

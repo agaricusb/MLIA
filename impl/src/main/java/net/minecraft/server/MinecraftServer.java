@@ -10,6 +10,6 @@ public class MinecraftServer {
     }
 
     public ServerConfigurationManager func_71203_ab() {
-
+        return null;
     }
 }

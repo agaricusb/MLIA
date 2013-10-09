@@ -2,15 +2,12 @@ package net.minecraft.util;
 
 import net.minecraft.client.gui.GuiSmallButton;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class StringTranslate {
     private final static StringTranslate instance = new StringTranslate();
 
-    public HashMap<GuiSmallButton, String> field_73887_h = new HashMap<GuiSmallButton, String>(); // TODO: collection type. add()
+    public List<GuiSmallButton> field_73887_h = new ArrayList<GuiSmallButton>();
 
     /** get shared instance */
     public static StringTranslate func_74808_a() {

@@ -2,12 +2,17 @@ package net.minecraft.client.gui;
 
 import net.minecraft.client.Minecraft;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GuiScreen {
 
     public int field_73880_f;
     public int field_73881_g;
     protected FontRenderer field_73886_k;
     protected Minecraft field_73882_e;
+    public List<Object> field_73887_h = new ArrayList<Object>();
+    public double field_73735_i;
 
     public GuiScreen() {
 
@@ -29,6 +34,10 @@ public class GuiScreen {
 
     /** draw the whole screen */
     public void func_73863_a(int a, int b, float c) {
+
+    }
+
+    public void func_73875_a(GuiButton button) {
 
     }
 }

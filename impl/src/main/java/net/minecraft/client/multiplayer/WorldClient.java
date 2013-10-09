@@ -1,4 +1,6 @@
 package net.minecraft.client.multiplayer;
 
-public class WorldClient {
+import net.minecraft.world.World;
+
+public class WorldClient extends World {
 }
