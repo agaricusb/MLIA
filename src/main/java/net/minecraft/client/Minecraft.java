@@ -60,7 +60,7 @@ public class Minecraft {
     public GuiScreen field_71462_r;
 
     /** game settings, including key bindings */
-    public GameSettings field_71474_y;
+    public GameSettings field_71474_y = new GameSettings();
 
     public EntityPlayer field_71439_g;
 
