@@ -2,6 +2,9 @@ package net.minecraft.item;
 
 public class Item {
 
+    /** list of all items by id */
+    public static Item[] field_77698_e;
+
     /** map item */
     public static Item field_77744_bd = new Item();
 
@@ -15,5 +18,10 @@ public class Item {
 
     public String func_77667_c(ItemStack itemStack) {
         return null;
+    }
+
+    /** something with villager emerald buy/sell recipes */
+    public int func_77612_l() {
+        return 0;
     }
 }

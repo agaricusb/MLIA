@@ -9,7 +9,8 @@ public class GuiErrorScreen {
 
     }
 
-    public void func_73863_a(int a, int b, int c) {
+    /** draw screen */
+    public void func_73863_a(int a, int b, float c) {
 
     }
 
