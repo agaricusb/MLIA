@@ -28,7 +28,7 @@ public class GuiScreen {
     }
 
     /** draw text */
-    public void func_73732_a(FontRenderer fontRenderer, String text, int x, int offset, int color) {
+    protected void func_73732_a(FontRenderer fontRenderer, String text, int x, int offset, int color) {
         System.out.println("GuiScreen: " + text);
     }
 
@@ -37,7 +37,7 @@ public class GuiScreen {
 
     }
 
-    public void func_73875_a(GuiButton button) {
+    protected void func_73875_a(GuiButton button) {
 
     }
 }
