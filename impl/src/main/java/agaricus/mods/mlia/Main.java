@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Minecraft client = new Minecraft();
+        System.setProperty("fml.core.libraries.mirror", "https://dl.dropboxusercontent.com/u/126404991/fmllibs/%s");
 
         FMLRelauncher.handleClientRelaunch(new ArgsWrapper(args));
     }
