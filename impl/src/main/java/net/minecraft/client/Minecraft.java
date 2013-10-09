@@ -9,6 +9,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
 
+import java.io.File;
 import java.io.InputStream;
 
 public class Minecraft {
@@ -32,6 +33,9 @@ public class Minecraft {
     public GameSettings field_71474_y;
 
     public EntityPlayer field_71439_g;
+
+    /** home directory (minecraftDir, an) */
+    public static File field_71463_am = new File(".");
 
     public void func_71373_a(Object o) {
 
@@ -58,5 +62,10 @@ public class Minecraft {
     /** reset client state */
     public void func_71403_a(WorldClient worldClient) {
 
+    }
+
+    /** get root directory (called in FMLRelauncher) */
+    public static String func_71380_b() { // aka getMinecraftDir() or b()
+        return ".";
     }
 }
