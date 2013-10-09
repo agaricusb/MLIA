@@ -80,12 +80,6 @@
     </dependency>
 </dependencies>
 <build>
-    <sourceDirectory>impl/src/main/java</sourceDirectory>
-    <resources>
-        <resource>
-            <directory>impl/src/main/resources</directory>
-        </resource>
-    </resources>
     <plugins>
         <plugin>
             <groupId>com.mycila.maven-license-plugin</groupId>
