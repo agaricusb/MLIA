@@ -28,6 +28,7 @@
  */
 package net.minecraft.client;
 
+import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.ArgsWrapper;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -100,5 +101,13 @@ public class Minecraft {
 
     public static void fmlReentry(ArgsWrapper wrapper) {
         System.out.println("entered fmlReentry");
+
+        System.out.println("MLIA loading...");
+        FMLClientHandler.instance().beginMinecraftLoading(new Minecraft());
+        System.out.println("Finishing loading");
+        FMLClientHandler.instance().finishMinecraftLoading();
+        System.out.println("Initialization completing");
+        FMLClientHandler.instance().onInitializationComplete();
+        System.out.println("Done");
     }
 }
