@@ -1,4 +1,5 @@
 package net.minecraft.world;
 
-public class EnumGameType {
+public enum EnumGameType {
+    NOT_SET
 }
